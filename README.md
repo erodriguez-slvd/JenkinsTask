@@ -24,4 +24,14 @@ mvn clean eclipse:eclipse
 ```
 mvn clean test -Dsuite=api
 ```
-
+## Implementation details
+### Docker
+1. Create Dockerfile
+2. Build the Docker image using the following command in the carina-demo folder
+```
+docker build -t carina-demo .
+```
+3. And then you can run the container using the following command. This will build the Docker image named "carina-demo" and run a container based on that image. The Maven tests will be executed automatically when the container starts.
+```
+docker run carina-demo
+```
