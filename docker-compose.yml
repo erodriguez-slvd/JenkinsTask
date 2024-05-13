@@ -1,0 +1,11 @@
+version: '2.18.1'
+services:
+  carina-demo:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - './target/:/carina-demo/target'
+      - './reports/:/carina-demo/reports'
+    environment:
+      - "SUITE=api"
