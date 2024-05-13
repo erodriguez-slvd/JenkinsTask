@@ -1,0 +1,23 @@
+version: '2.18.1'
+services:
+  selenoid:
+    network_mode: bridge
+    container_name: selenoid
+    image: aerokube/selenoid:latest
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "$PWD:/etc/selenoid"
+    ports:
+      - "4444:4444"
+    command: [ "-conf", "/etc/selenoid/browsers.json", "-video-output-dir", "/etc/selenoid/video" ]
+  selenoid-ui:
+    image: aerokube/selenoid-ui:latest
+    network_mode: "bridge"
+    environment:
+      - "SELENOID_URI=http://localhost:4444"
+    ports:
+      - "8080:8080"
+    links:
+      - selenoid
+    command:
+        [ "--selenoid-uri", "http://selenoid:4444" ]
