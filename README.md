@@ -54,3 +54,24 @@ services:
         environment:
             - ENV_VARIABLE_NAME=value
 ```
+7. To remove the network and container use the command **docker-compose down** 
+8. To just stop the container use **docker-compose stop**
+
+### Jenkins Sample commands:
+- Install the latest LTS version: brew install jenkins-lts
+- Start the Jenkins service: brew services start jenkins-lts
+- Restart the Jenkins service: brew services restart jenkins-lts
+- Update the Jenkins version: brew upgrade jenkins-lts
+- Stop Jenkins service: brew services stop jenkins-lts
+
+After starting the Jenkins service, browse to http://localhost:8080 and log in with your credentials.
+
+### Jenkins Setup:
+1. From the Jenkins Dashboard, click on “New Item”. Enter a name for your job, such as Carina-Demo-API-Sample-Jenkins, and select “Freestyle project”. Click “OK”.
+2. Source Code Management: 
+- Select “Git”.
+- Repository URL: Enter https://github.com/qaprosoft/carina-demo.git.
+- Branch Specifier: Use the default */main or specify the branch you want to clone.
+3. Select “Git”.
+   Repository URL: Enter https://github.com/qaprosoft/carina-demo.git.
+   Branch Specifier: Use the default */main or specify the branch you want to clone.
