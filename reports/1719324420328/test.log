@@ -1,0 +1,19 @@
+[2024-06-25 02:07:00] [1] [INFO] 
+============= Basic configuration =============
+env=DEMO
+=========== Encryptor configuration ===========
+crypto_key_value=*****
+=========== WebDriver configuration ===========
+url=https://www.gsmarena.com
+auto_screenshot=true
+localization_encoding=UTF-8
+language=en_US
+-------------- Driver capabilities ------------
+===============================================
+
+[2024-06-25 02:07:00] [1] [WARN] Reporting disabled: using no op test run registrar
+[2024-06-25 02:07:01] [1] [INFO] Set thread-count=1
+[2024-06-25 02:07:01] [1] [INFO] Set data-provider-thread-count=1
+[2024-06-25 02:07:01] [1] [INFO] CARINA_CORE_VERSION: 1.1.5
+[2024-06-25 02:07:01] [1] [INFO] INFO: '**************** Test execution summary ****************'.
+[2024-06-25 02:07:01] [1] [INFO] RESULT #1: TEST [Surefire test - helloWorld] PASS [log=file:///Users/solvd/Documents/Projects/JenkinsTask/./reports/1719324420328/7a28d980-76d0-4476-811c-bd6ef11d16f5/test.log]
