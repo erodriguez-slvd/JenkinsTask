@@ -22,7 +22,7 @@ public class DevToolsTest implements IAbstractTest {
         DriverHelper driverHelper = new DriverHelper(getDriver());
 
         LOGGER.info("Trying to get Chrome DevTools...");
-        ChromeDevToolsService chromeDevToolsService = driverHelper.getChromeDevTools();
+        ChromeDevToolsService chromeDevToolsService = driverHelper.pageChromeDevTools();
         LOGGER.info("Got Chrome DevTools. Trying to get browser js version...");
         String jsVersion = chromeDevToolsService.getBrowser()
                 .getVersion()
